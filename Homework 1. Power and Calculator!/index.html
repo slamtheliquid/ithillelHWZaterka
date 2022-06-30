@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 1!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+
+    <h1 class="calculatorTitle">I can multiply your number!</h1>
+        <form class="calcForm" id="multiplyForm" name="calcForm" onsubmit="return false">
+            <label class="formLabel">Input any number!</label>
+            <input class="formInput" id="startNumberInput" type="number" name="startNumberInput" value="0">
+            <label class="formLabel">Squared:</label>
+            <input class="formInput" id="resultMultiplySquare" name="result" readonly>
+            <label class="formLabel">Cubed: </label>
+            <input class="formInput" id="resultMultiplyCube" name="result" readonly>
+            <button class="formButton" id="multiplyButton" name="calcButton" onclick="multiplyNumbers()">Getting cubed!</button>
+        </form>
+
+    <h1 class="calculatorTitle">Funny Degrees Calculator I made!</h1>
+        <form class="calcForm" id="calcForm" name="calcForm" onsubmit="return false">
+            <label class="formLabel">Choose Degree type</label>
+            <select class="formSelect" name="selection" id="degreeSelection">
+                <option value="0">Celsius</option>
+                <option value="1">Fahrenheit</option>
+                <option value="2">Kelvin</option>
+            </select>
+            <label class="formLabel">Input degrees!</label>
+            <input class="formInput" id="degreesInput" type="number" name="degreesInput" value="0">
+            <label class="formLabel">Convert to:</label>
+            <select class="formSelect" name="selection" id="dropdown">
+                <option id="celcius" value="0">Celsius</option>
+                <option id="fahrenheit" value="1">Fahrenheit</option>
+                <option id="kelvin" value="2">Kelvin</option>
+            </select>
+            <label class="formLabel">Output: </label>
+            <input class="formInput" id="result" name="result" readonly>
+            <button class="formButton" id="calcButton" name="calcButton" onclick="calculateDegrees()">Calculate!</button>
+        </form>
+        <script src="main.js"></script>
+    </body>
+</html>

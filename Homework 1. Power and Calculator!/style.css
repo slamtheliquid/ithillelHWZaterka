@@ -1,0 +1,54 @@
+*{
+    font-family: Calibri;
+}
+.calculatorTitle{
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 48px;
+    color: #b103fc;
+}
+.calcForm{
+    display: block;
+    margin: 140px auto;
+    width: 500px;
+    background-color: #b103fc;
+    padding: 10px 0;
+    border-radius: 25px;
+}
+.formLabel{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+}
+.formButton{
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 36px;
+    padding: 15px 40px;
+    background-color: #169ed9;
+    color: #fff;
+    border: 2px solid #5f0387;
+    border-radius: 25px;
+}
+.formInput{
+    display: flex;
+    margin: 20px auto;
+    padding: 15px 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #5f0387;
+    border-radius: 25px;
+}
+.formSelect{
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px 0px;
+    width: 200px;
+    border: 2px solid #5f0387;
+}
