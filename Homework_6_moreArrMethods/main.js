@@ -62,6 +62,6 @@ calculator();
 //Задание 3
 
 let anagram = (s1, s2) => {
-    return s1.split('').sort().join('') === s2.split('').sort().join(''); //deconstructs the strings, sorts them in the alphabetical order and then builds up them back
+    return s1.toLowerCase().split('').sort().join('') === s2.toLowerCase().split('').sort().join(''); //deconstructs the strings, sorts them in the alphabetical order and then builds up them back
 }
-console.log(anagram('cake', 'kace'));
+console.log(anagram('cake', 'kAcE'));
