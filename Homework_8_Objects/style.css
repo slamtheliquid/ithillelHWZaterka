@@ -1,0 +1,41 @@
+.wrapper{
+    width: 500px;
+    margin: 40px auto;
+}
+.mainTable{
+    border-collapse:collapse;
+    border-spacing:0;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
+}
+.mainTable td{
+    border-color:black;
+    border-style:solid;
+    border-width:3px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+    background-color: #966ab4;
+    color: #fff;
+}
+.mainTable th{
+    border-color:black;
+    border-style:solid;
+    border-width:3px;
+    font-size:16px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+    background-color: #7313b4;
+    color: #fff;
+}
+.mainTable .tableCeil{
+    text-align:left;
+    vertical-align:top
+}
+.tableImage{
+    width: 100px;
+    height: auto;
+}
