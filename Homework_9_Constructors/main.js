@@ -55,34 +55,32 @@ let appliances = [
     }
 ];
 
-function Product(category, name, type, price){
-    let typeName;
+function Product(category, type, price){
     this.category = category;
     this.type = type;
     this.price = price;
-    this.render = function(){
-        category.forEach( stuff => {
-            document.write(`<tr>
-                                <td class="tableCeil">
-                                    <img class="tableImage" src="images/${name}/${stuff.type}.svg">
-                                </td>
-                                <td class="tableCeil">${typeName = stuff.type[0].toUpperCase() + stuff.type.slice(1,stuff.type.length).toLowerCase()}</td>`);
-                if(Array.isArray(stuff.price)){
-                    document.write(`<td class="tableCeil">${stuff.price[0]}$ - ${stuff.price[1]}$</td>`);
-                }else{
-                    document.write(`<td class="tableCeil">${stuff.price}$</td>`);
-                }
-                document.write(`</tr>`);
-        });
-    }
 }
-
+Product.prototype.render = function (){
+    this.renderStr = (`<tr><td class="tableCeil"><img class="tableImage" src="images/${this.category}/${this.type}.svg"></td>
+                           <td class="tableCeil">${this.type[0].toUpperCase() + this.type.slice(1,this.type.length).toLowerCase()}</td>`);
+    if(Array.isArray(this.price)){
+        this.renderStr += (`<td class="tableCeil">${this.price[0]}$ - ${this.price[1]}$</td>`);
+    }else{
+        this.renderStr += (`<td class="tableCeil">${this.price}$</td>`);
+    }
+    this.renderStr += (`</tr>`);
+    return this.renderStr;
+}
+let category = (arr, name) => {
+    arr.forEach(el =>{
+        const product = new Product(name, el.type, el.price);
+        document.write(product.render());
+    });
+}
 document.write('<div class="wrapper"><table class="mainTable"><tr><th>Illustration</th><th>Type</th><th>Price</th></tr>');
-let productFurniture = new Product(furniture, Object.keys({furniture})[0]);             // я не понял как можно обнаружить название массива объектов,
-let productDevices = new Product(devices, Object.keys({devices})[0]);                   // кроме такого способа. это значени требуется для паса картинки
-let productAppliances = new Product(appliances, Object.keys({appliances})[0]);
 
-productFurniture.render();
-productDevices.render();
-productAppliances.render();
+category(furniture, "furniture");
+category(devices, "devices");
+category(appliances, "appliances");
+
 document.write('</table></div>');
