@@ -41,9 +41,3 @@ console.log(motorcycle.numWheels);
 console.log(motorcycle.start());
 console.log(motorcycle.end());
 console.log(motorcycle.toString());
-
-
-
-
-
-
