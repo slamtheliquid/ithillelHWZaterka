@@ -11,29 +11,24 @@ const HAMBURGER = {
     },
     toppings: {
         cheese: {
-            name: 'cheese',
             price: 1,
             calories: 20
         },
         salad: {
-            name: 'salad',
             price: 2,
             calories: 5
         },
         potato: {
-            name: 'potato',
             price: 1.5,
             calories: 10
         }
     },
     supplements: {
         seasoning: {
-            name: 'seasoning',
             price: 1.5,
             calories: 0
         },
         mayonnaise: {
-            name: 'mayonnaise',
             price: 2,
             calories: 5
         }
@@ -63,39 +58,23 @@ class Hamburger {
     addToppings(topping){
         if(Array.isArray(topping)){
             for(let i = 0; i < topping.length; i++){
-                for(let key in HAMBURGER.toppings){
-                    if(topping[i].name === HAMBURGER.toppings[key].name){
-                        this.price += HAMBURGER.toppings[key].price;
-                        this.calories += HAMBURGER.toppings[key].calories;
-                    }
-                }
+                this.price += topping[i].price;
+                this.calories += topping[i].calories;
             }
         }else{
-            for(let key in HAMBURGER.toppings){
-                if(topping.name === HAMBURGER.toppings[key].name){
-                    this.price += HAMBURGER.toppings[key].price;
-                    this.calories += HAMBURGER.toppings[key].calories;
-                }
-            }
+            this.price += topping.price;
+            this.calories += topping.calories;
         }
     }
     addSupplements(supplement){
         if(Array.isArray(supplement)) {
             for (let i = 0; i < supplement.length; i++) {
-                for (let key in HAMBURGER.supplements) {
-                    if (supplement[i].name === HAMBURGER.supplements[key].name) {
-                        this.price += HAMBURGER.supplements[key].price;
-                        this.calories += HAMBURGER.supplements[key].calories;
-                    }
-                }
+                this.price += supplement[i].price;
+                this.calories += supplement[i].calories;
             }
         }else{
-            for(let key in HAMBURGER.supplements){
-                if(supplement.name === HAMBURGER.supplements[key].name){
-                    this.price += HAMBURGER.supplements[key].price;
-                    this.calories += HAMBURGER.supplements[key].calories;
-                }
-            }
+            this.price += supplement.price;
+            this.calories += supplement.calories;
         }
     }
 }
