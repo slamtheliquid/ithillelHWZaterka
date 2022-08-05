@@ -48,27 +48,22 @@ class Hamburger {
         this.price += hamSize.price;
         this.calories += hamSize.calories;
     }
-    addToppings(topping){
-        if(Array.isArray(topping)){
-            for(let i = 0; i < topping.length; i++){
-                this.price += topping[i].price;
-                this.calories += topping[i].calories;
+    calculateTopSupPriceCcal(entryArr){
+        if(Array.isArray(entryArr)){
+            for(let i = 0; i < entryArr.length; i++){
+                this.price += entryArr[i].price;
+                this.calories += entryArr[i].calories;
             }
         }else{
-            this.price += topping.price;
-            this.calories += topping.calories;
+            this.price += entryArr.price;
+            this.calories += entryArr.calories;
         }
     }
+    addToppings(topping){
+        this.calculateTopSupPriceCcal(topping);
+    }
     addSupplements(supplement){
-        if(Array.isArray(supplement)) {
-            for (let i = 0; i < supplement.length; i++) {
-                this.price += supplement[i].price;
-                this.calories += supplement[i].calories;
-            }
-        }else{
-            this.price += supplement.price;
-            this.calories += supplement.calories;
-        }
+        this.calculateTopSupPriceCcal(supplement);
     }
 }
 const burger = new Hamburger();
