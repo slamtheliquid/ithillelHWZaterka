@@ -1,13 +1,15 @@
 const HAMBURGER = {
-    small: {
-        name: 'small',
-        price: 5,
-        calories: 20
-    },
-    large: {
-        name: 'large',
-        price: 10,
-        calories: 40
+    size: {
+        small: {
+            name: 'small',
+            price: 5,
+            calories: 20
+        },
+        large: {
+            name: 'large',
+            price: 10,
+            calories: 40
+        }
     },
     toppings: {
         cheese: {
@@ -42,18 +44,9 @@ class Hamburger {
         this.calories = 0;
     }
     hamburgerSize(hamSize){
-        if(hamSize === 'small'){
-            this.size = HAMBURGER.small.name;
-            this.price += HAMBURGER.small.price;
-            this.calories += HAMBURGER.small.calories;
-        }else if(hamSize === 'large'){
-            this.size = HAMBURGER.large.name;
-            this.price += HAMBURGER.large.price;
-            this.calories += HAMBURGER.large.calories;
-        }else{
-            this.price = 0;
-            this.calories = 0;
-        }
+        this.size = hamSize.name;
+        this.price += hamSize.price;
+        this.calories += hamSize.calories;
     }
     addToppings(topping){
         if(Array.isArray(topping)){
@@ -79,7 +72,7 @@ class Hamburger {
     }
 }
 const burger = new Hamburger();
-burger.hamburgerSize('large');
+burger.hamburgerSize(HAMBURGER.size.large);
 console.log(burger.size);
 console.log(burger.price);
 console.log(burger.calories);
