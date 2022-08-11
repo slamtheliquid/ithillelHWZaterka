@@ -20,7 +20,5 @@ window.onload = function() {
     const text = document.querySelector('p');
     text.insertAdjacentHTML('afterend', '<a href="https://forcemipsum.com/">Source</a>');
     text.insertAdjacentHTML('beforebegin', `<div>word counter: ${text.innerHTML.countWords()}</div>`);
-
-    const sample = document.querySelector("p");
-    sample.innerHTML = sample.innerText.trim().split(' ').map(check).join(' ');
+    text.innerHTML = sample.innerText.trim().split(' ').map(check).join(' ');
 }
