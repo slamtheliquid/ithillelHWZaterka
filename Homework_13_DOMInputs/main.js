@@ -1,5 +1,14 @@
 const button = document.querySelector('#submitButton');
+const form = document.querySelector('#form');
 let bookmarks = [];
+
+const checkInput = () => {
+    if(form.elements.name.value.length > 0  && form.elements.text.value.length > 0){
+        button.removeAttribute('disabled');
+    }else{
+        button.setAttribute('disabled','disabled');
+    }
+}
 
 let bookmarkSave = (id) => {
     const buttonSave = document.querySelector(`#bookmarkButtonSave${id}`);
@@ -121,3 +130,4 @@ let getInputs = () => {
     console.log(bookmarks);
 }
 button.addEventListener('click', getInputs);
+form.addEventListener('input', checkInput);
