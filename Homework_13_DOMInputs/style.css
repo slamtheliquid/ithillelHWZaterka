@@ -52,3 +52,12 @@
     border-radius: 20px;
     font-size: 20px;
 }
+#submitButton:disabled{
+    background-color: #ae7ce8;
+}
+#submitButton:disabled:hover{
+    background-color: #ae7ce8;
+}
+#submitButton:hover{
+    background-color: #721bbb;
+}
