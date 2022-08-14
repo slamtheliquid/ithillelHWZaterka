@@ -9,10 +9,10 @@
 <form id="form" onsubmit="return false;">
     <h1 class="title">Дэшборд</h1>
     <label class="formLabel">Название заметки</label>
-    <input class="formInput" type="text" id="inputName" placeholder="Прикольное название"/>
+    <input class="formInput" name="name" type="text" id="inputName" placeholder="Прикольное название"/>
     <label class="formLabel">Содержание заметки</label>
-    <input class="formInput" type="text" id="inputText" placeholder="Помыть собаку"/>
-    <button id="submitButton">Создать заметку</button>
+    <input class="formInput" name="text" type="text" id="inputText" placeholder="Помыть собаку"/>
+    <button id="submitButton" disabled>Создать заметку</button>
 </form>
 <div id="after"></div>
     <script src="main.js"></script>
