@@ -9,6 +9,9 @@ const submit = (event) => {
     if(inputVal === ''){
         inputVal = 0;
     }
+    if(inputVal.length === 4 && select.value === 'date'){
+        inputVal = inputVal.substring(0, 2) + '/' + inputVal.substring(2, inputVal.length);
+    }
     getResult(inputVal, select.value);
 }
 const random = (event) => {
