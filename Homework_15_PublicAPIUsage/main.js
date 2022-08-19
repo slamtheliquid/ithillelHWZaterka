@@ -13,13 +13,7 @@ const submit = (event) => {
 }
 const random = (event) => {
     event.preventDefault();
-    let min = Math.ceil(1);
-    let max = Math.floor(9999);
-    if(select.value === 'year'){
-        max = Math.floor(2025);
-    }
-    let rand = Math.floor(Math.random() * (max - min) + min);
-    getResult(rand, select.value);
+    getResult('random', select.value);
 }
 const getResult = (value, option) => {
     const insertDiv = document.querySelector('footer');
