@@ -30,12 +30,6 @@ $(document).ready(function () {
             console.log(error);
         })
     }
-    $(`#submit`).on('click', function(event){
-        let value = $('#search').val();
-        let directories = $('#directories').val();
-        let url = `https://swapi.dev/api/${directories}/?search=${value}`;
-        getAjaxSearch(url);
-    })
     function getAjaxSearch(url){
         $("#result").html('');
         $("#result").append('<hr>');
@@ -43,7 +37,6 @@ $(document).ready(function () {
             url: url,
             method: 'GET',
         }).done(function(result) {
-            console.log(result);
             $.each(Object.values(result['results']), function (key, value) {
                 $.each(value, function (el, val) {
                     if(Array.isArray(val)){
@@ -71,6 +64,12 @@ $(document).ready(function () {
             console.log(error);
         })
     }
+    $(`#submit`).on('click', function(event){
+        let value = $('#search').val();
+        let directories = $('#directories').val();
+        let url = `https://swapi.dev/api/${directories}/?search=${value}`;
+        getAjaxSearch(url);
+    })
     $('#film1').on('click', function(event){
         getAjax('https://swapi.dev/api/films/1/');
     })
