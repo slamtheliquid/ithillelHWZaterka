@@ -108,3 +108,19 @@ a:visited{
     color: #fff;
     border: 2px solid #fff;
 }
+.directoriesWrapper{
+    display: flex;
+    justify-content: center;
+}
+.directoryLink{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 30%;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.directoryLink:hover{
+    background-color: #111111;
+}
