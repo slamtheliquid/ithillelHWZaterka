@@ -88,4 +88,22 @@ $(document).ready(function () {
     $('#film6').on('click', function(event){
         getAjax('https://swapi.dev/api/films/6/');
     })
+    $('#filmsLink').on('click', function(event){
+        getAjaxSearch('https://swapi.dev/api/films/');
+    })
+    $('#peopleLink').on('click', function(event){
+        getAjaxSearch('https://swapi.dev/api/people/');
+    })
+    $('#planetsLink').on('click', function(event){
+        getAjaxSearch('https://swapi.dev/api/planets/');
+    })
+    $('#speciesLink').on('click', function(event){
+        getAjaxSearch('https://swapi.dev/api/species/');
+    })
+    $('#starshipsLink').on('click', function(event){
+        getAjaxSearch('https://swapi.dev/api/starships/');
+    })
+    $('#vehiclesLink').on('click', function(event){
+        getAjaxSearch('https://swapi.dev/api/vehicles/');
+    })
 })
