@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lesson 18</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="backgroundWrapper">
+        <div class="wrapper">
+            <h1 class="title">Star Wars series  Information Centre</h1>
+            <div class="mainContainer">
+                <div class="helpingContainer">
+                    <div class="navElem" id="film1" style="background-image: url('images/4.jpg')"><span class="navText">A New Hope</span></div>
+                    <div class="navElem" id="film2" style="background-image: url('images/5.jpg')"><span class="navText">The Empire Strikes Back</span></div>
+                    <div class="navElem" id="film3" style="background-image: url('images/6.jpg')"><span class="navText">Return of the Jedi</span></div>
+                </div>
+                <div class="helpingContainer">
+                    <div class="navElem" id="film4" style="background-image: url('images/1.jpg')"><span class="navText">The Phantom Menace</span></div>
+                    <div class="navElem" id="film5" style="background-image: url('images/2.jpg')"><span class="navText">Attack of the Clones</span></div>
+                    <div class="navElem" id="film6" style="background-image: url('images/3.jpg')"><span class="navText">Revenge of the Sith</span></div>
+                </div>
+            </div>
+            <h2 class="searchTitle">Manual Search</h2>
+            <label for="directories" class="directoriesLabel">Choose a directory to search:</label>
+            <select name="directories" id="directories">
+                <option value="films" selected="selected">Films</option>
+                <option value="people">People</option>
+                <option value="planets">Planets</option>
+                <option value="species">Species</option>
+                <option value="starships">Starships</option>
+                <option value="vehicles">Vehicles</option>
+            </select>
+            <input class="search" id="search" placeholder="r2" />
+            <button class="button" id="submit">Search</button>
+            <div id="result">
+
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
