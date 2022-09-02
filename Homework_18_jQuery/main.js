@@ -76,7 +76,6 @@ $(document).ready(function () {
                    'https://swapi.dev/api/films/', 'https://swapi.dev/api/people/', 'https://swapi.dev/api/planets/', 'https://swapi.dev/api/species/', 'https://swapi.dev/api/starships/', 'https://swapi.dev/api/vehicles/'];
 
     for(let i = 0; i < elArr.length; i++){
-        console.log(elArr[i] + ': ' + linkArr[i]);
         if(elArr[i].endsWith('Link')){
             $(elArr[i]).on('click', function(event){
                 getAjaxSearch(linkArr[i]);
