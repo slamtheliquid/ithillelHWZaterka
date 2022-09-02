@@ -70,40 +70,21 @@ $(document).ready(function () {
         let url = `https://swapi.dev/api/${directories}/?search=${value}`;
         getAjaxSearch(url);
     })
-    $('#film1').on('click', function(event){
-        getAjax('https://swapi.dev/api/films/1/');
-    })
-    $('#film2').on('click', function(event){
-        getAjax('https://swapi.dev/api/films/2/');
-    })
-    $('#film3').on('click', function(event){
-        getAjax('https://swapi.dev/api/films/3/');
-    })
-    $('#film4').on('click', function(event){
-        getAjax('https://swapi.dev/api/films/4/');
-    })
-    $('#film5').on('click', function(event){
-        getAjax('https://swapi.dev/api/films/5/');
-    })
-    $('#film6').on('click', function(event){
-        getAjax('https://swapi.dev/api/films/6/');
-    })
-    $('#filmsLink').on('click', function(event){
-        getAjaxSearch('https://swapi.dev/api/films/');
-    })
-    $('#peopleLink').on('click', function(event){
-        getAjaxSearch('https://swapi.dev/api/people/');
-    })
-    $('#planetsLink').on('click', function(event){
-        getAjaxSearch('https://swapi.dev/api/planets/');
-    })
-    $('#speciesLink').on('click', function(event){
-        getAjaxSearch('https://swapi.dev/api/species/');
-    })
-    $('#starshipsLink').on('click', function(event){
-        getAjaxSearch('https://swapi.dev/api/starships/');
-    })
-    $('#vehiclesLink').on('click', function(event){
-        getAjaxSearch('https://swapi.dev/api/vehicles/');
-    })
+    
+    let elArr = ['#film1', '#film2', '#film3', '#film4', '#film5', '#film6', '#filmsLink', '#peopleLink', '#planetsLink', '#speciesLink', '#starshipsLink', '#vehiclesLink'];
+    let linkArr = ['https://swapi.dev/api/films/1/', 'https://swapi.dev/api/films/2/', 'https://swapi.dev/api/films/3/', 'https://swapi.dev/api/films/4/', 'https://swapi.dev/api/films/5/', 'https://swapi.dev/api/films/6/',
+                   'https://swapi.dev/api/films/', 'https://swapi.dev/api/people/', 'https://swapi.dev/api/planets/', 'https://swapi.dev/api/species/', 'https://swapi.dev/api/starships/', 'https://swapi.dev/api/vehicles/'];
+
+    for(let i = 0; i < elArr.length; i++){
+        console.log(elArr[i] + ': ' + linkArr[i]);
+        if(elArr[i].endsWith('Link')){
+            $(elArr[i]).on('click', function(event){
+                getAjaxSearch(linkArr[i]);
+            })
+        }else{
+            $(elArr[i]).on('click', function(event){
+                getAjax(linkArr[i]);
+            })
+        }
+    }
 })
