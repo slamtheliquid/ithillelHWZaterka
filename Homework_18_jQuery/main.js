@@ -75,15 +75,15 @@ $(document).ready(function () {
     let linkArr = ['https://swapi.dev/api/films/1/', 'https://swapi.dev/api/films/2/', 'https://swapi.dev/api/films/3/', 'https://swapi.dev/api/films/4/', 'https://swapi.dev/api/films/5/', 'https://swapi.dev/api/films/6/',
                    'https://swapi.dev/api/films/', 'https://swapi.dev/api/people/', 'https://swapi.dev/api/planets/', 'https://swapi.dev/api/species/', 'https://swapi.dev/api/starships/', 'https://swapi.dev/api/vehicles/'];
 
-    for(let i = 0; i < elArr.length; i++){
-        if(elArr[i].endsWith('Link')){
-            $(elArr[i]).on('click', function(event){
-                getAjaxSearch(linkArr[i]);
+    $.each(elArr, function(index, value){
+        if(elArr[index].endsWith('Link')){
+            $(elArr[index]).on('click', function(event){
+                getAjaxSearch(linkArr[index]);
             })
         }else{
-            $(elArr[i]).on('click', function(event){
-                getAjax(linkArr[i]);
+            $(elArr[index]).on('click', function(event){
+                getAjax(linkArr[index]);
             })
         }
-    }
+    });
 })
