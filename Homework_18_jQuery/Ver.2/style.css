@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic Medium";
+}
+
+.backgroundWrapper{
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #000;
+}
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #222;
+    text-align: center;
+}
+.title{
+    color: #fff;
+    text-align: center;
+    margin: 0 0 50px 0;
+    padding: 100px 0 0 0;
+    border-bottom: 2px solid #fff;
+}
+.helpingContainer{
+    display: flex;
+}
+.navElem{
+    width: 30%;
+    margin: 1.5% 20px;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background-size: 110%;
+    background-position: center;
+    transition: 0.2s;
+}
+.navText{
+    border: 3px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.navElem:hover{
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+.search{
+    display: block;
+    font-size: 24px;
+    border: 2px solid #fff;
+    background-color: #333;
+    color: #fff;
+    margin: 20px auto;
+}
+.checkboxHolder{
+    text-align: center;
+}
+.label{
+    font-size: 20px;
+    color: #fff;
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+}
+.searchTitle{
+    font-size: 24px;
+    color: #fff;
+    margin: 20px 0;
+}
+hr{
+    margin: 20px 0;
+}
+.titleSearchResult{
+    font-size: 24px;
+    color: gold;
+}
+a{
+    color: gold;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color: darkgoldenrod;
+}
+#submit{
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 50px;
+    background-color: #333333;
+    transition: 0.3s;
+}
+#submit:hover{
+    background-color: #111;
+    cursor: pointer;
+}
+.directoriesLabel{
+    color: #fff;
+    font-size: 22px;
+}
+#directories{
+    font-size: 22px;
+    background-color: #333333;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.directoriesWrapper{
+    display: flex;
+    justify-content: center;
+}
+.directoryLink{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 30%;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.directoryLink:hover{
+    background-color: #111111;
+}
+.resultsWrapper{
+    display: flex;
+}
+#result{
+    border-right: 2px solid #fff;
+}
+.resultItem{
+    width: 50%;
+    color: #fff;
+    padding: 10px 20px;
+}
