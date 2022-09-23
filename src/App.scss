@@ -1,0 +1,54 @@
+.wrapper{
+  padding: 120px;
+  margin: 120px auto;
+  text-align: center;
+  background-color: #fa4e4e;
+  width: 25%;
+}
+.title{
+  color: #fff;
+}
+.form-control{
+  font-size: 24px;
+  padding: 10px 5px;
+  margin: 5px auto;
+  border: 3px solid #851313;
+  width: 60%;
+  display: block;
+}
+.result{
+  margin: 10px;
+  font-size: 20px;
+  font-family: Cambria;
+}
+.button{
+  display: block;
+  margin: 10px auto;
+  padding: 10px 30px;
+  width: 60%;
+  font-size: 24px;
+  color: #fff;
+  border: 3px solid #851313;
+  background-color: #ff3131;
+  transition: 0.3s;
+}
+.button:hover{
+  cursor: pointer;
+  background-color: #7c1717;
+}
+.ListEl{
+  border: 3px solid #fff;
+  list-style: none;
+  margin: 10px auto;
+  padding: 20px 0;
+  text-align: center;
+}
+.List{
+  padding: 0;
+}
+.itemName{
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  width: 60%;
+  margin: 20px auto;
+}
