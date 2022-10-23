@@ -46,19 +46,19 @@ const Cities = (props: CitiesPropsType) => {
         setLoading(false);
     }, []);
 
-    const [todos] = useState(JSON_CITIES_DATA);
+    const [cities] = useState(JSON_CITIES_DATA);
     const [filtered, setFiltered] = useState([{}]);
 
     useEffect(() => {
-        setFiltered(todos);
-    }, [todos])
+        setFiltered(cities);
+    }, [cities])
 
     const search = (val:any) => {
-        let currentTodos = [], newList = [];
+        let currentCities = [], newList = [];
         if (val !== "") {
-            currentTodos = todos;
-            newList = currentTodos.filter(todo => {
-                const lc = todo.name.toLowerCase();
+            currentCities = cities;
+            newList = currentCities.filter(city => {
+                const lc = city.name.toLowerCase();
                 const filter = val.toLowerCase();
                 return lc.includes(filter);
             });
